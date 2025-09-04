@@ -83,7 +83,7 @@ public ResponseEntity<BaseResponse> fetchBook(@RequestBody  BookDto bookDto) {
         if (ObjectUtils.isEmpty(bookList)) {
             return new ResponseEntity<>(new BaseResponse("No Book found",null),HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity(new BaseResponse(null,bookList),HttpStatus.OK);
+        return new ResponseEntity(new BaseResponse("book list successfully fetched",bookList),HttpStatus.OK);
     }
 
     @PostMapping("/addBook-inWishList/{isbn}/{userId}")
